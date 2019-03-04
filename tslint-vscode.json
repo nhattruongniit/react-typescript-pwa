@@ -1,0 +1,22 @@
+{
+    "extends": "./tslint.json",
+    "rules": {
+        "await-promise": true,
+        "deprecation": true,
+        "match-default-export-name": false,
+        "no-boolean-literal-compare": true,
+        "no-floating-promises": true,
+        "no-for-in-array": true,
+        "no-inferred-empty-object-type": true,
+        "no-unnecessary-type-assertion": true,
+        "no-unsafe-any": true,
+        "prefer-readonly": true,
+        "promise-function-async": true,
+        "restrict-plus-operands": true,
+        "return-undefined": false,
+        "strict-boolean-expressions": true,
+        "use-default-type-parameter": false,
+        "indent": [false, "spaces", 2],
+        "quotemark": [true, "double"]
+    }
+}
