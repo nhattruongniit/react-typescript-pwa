@@ -1,0 +1,45 @@
+* {
+  outline:  0;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    color: $global-color-text-branch;
+    
+    font-family: Roboto,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    word-break: break-word;
+}
+
+form {
+    width: 100%;
+}
+
+button {
+    outline: none !important;
+}
+
+a {
+    margin: 0 !important;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: #999;
+}

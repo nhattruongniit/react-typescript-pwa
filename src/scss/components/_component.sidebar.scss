@@ -1,0 +1,43 @@
+/* ==========================================================================
+   # START SIDEBAR
+   ========================================================================== 
+*/
+
+.c-sidebar{
+    background-color: #fff;
+    bottom: 0;
+    position: fixed;
+    top: 0;
+    transition: all .2s ease;
+    width: 280px;
+    z-index: 1000;
+    border-right: 1px solid rgba(0,0,0,.0625);
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.c-sidebar__inner {
+    position: relative;
+    height: 100%;
+}
+
+.c-sidebar__logo {
+    color: #313435;
+    letter-spacing: .5px;
+    border-bottom: 1px solid rgba(0,0,0,.0625);
+    line-height: 66px;
+    padding: 0 20px;
+    transition: all .2s ease;
+    height: 66px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.c-sidebar__menu {
+    list-style-type: none;
+}
+
+/* ==========================================================================
+   # END SIDEBAR
+   ========================================================================== 
+*/
