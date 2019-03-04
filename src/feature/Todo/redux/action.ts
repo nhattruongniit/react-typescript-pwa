@@ -1,20 +1,14 @@
-import axios from 'axios';
 import { takeLatest, call, put } from 'redux-saga/effects';
 
-import {
-  TODO_CALL_REQUEST,
-  TODO_CALL_SUCCESS,
-  TODO_CALL_FAILURE,
-} from './reducer';
+import { getTodo } from '../api';
 
-const apiAddTodo = () => axios({
-  method: 'get',
-  url: 'https://jsonplaceholder.typicode.com/todos?_limit=5',
-})
+export const TODO_CALL_REQUEST = 'TODO_CALL_REQUEST';
+export const TODO_CALL_SUCCESS = 'TODO_CALL_SUCCESS';
+export const TODO_CALL_FAILURE = 'TODO_CALL_FAILURE';
 
-function* addTodo() {
+function* fetchTodo() {
   try {
-    const { data } = yield call(apiAddTodo);
+    const data = yield call(getTodo);
     yield put({ type: TODO_CALL_SUCCESS, data});
   } catch (error) {
     yield put({ type: TODO_CALL_FAILURE, error})
@@ -22,5 +16,5 @@ function* addTodo() {
 }
 
 export function* watcherTodoSaga() {
-  yield takeLatest(TODO_CALL_REQUEST, addTodo);
+  yield takeLatest(TODO_CALL_REQUEST, fetchTodo);
 }

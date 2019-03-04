@@ -3,6 +3,8 @@
         "tslint:recommended"
     ],
     "rules": {
+        "function-paren-newline": true,
+        "object-curly-newline": true,
         "no-consecutive-blank-lines": true,
         "array-type": [true, "array-simple"],
         "arrow-parens": true,

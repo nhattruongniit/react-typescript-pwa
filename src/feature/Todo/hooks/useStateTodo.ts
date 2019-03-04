@@ -1,5 +1,7 @@
 import {useState} from 'react';
-import { ITodo } from '../interface';
+import { ITodo } from '../models/ITodo';
+
+import { deleteTodoApi } from '../api';
 
 export const useStateTodo = (initialValue: ITodo[] = []) => {
   const [todos, setTodos] = useState(initialValue);
@@ -13,6 +15,7 @@ export const useStateTodo = (initialValue: ITodo[] = []) => {
       setTodos([...todos, todo]);
     },
     deleteTodo: (id: number) => {
+      deleteTodoApi(id);
       const updatedTodos = todos.filter((_, index) => index !== id);
       setTodos(updatedTodos);
     },

@@ -1,7 +1,13 @@
 import React from 'react';
 import { Button, List, ListItem, ListItemText } from '@material-ui/core';
 
-import { ITodo, ITodoList } from '../interface';
+import { ITodo } from '../models/ITodo';
+
+interface ITodoList {
+  todos: ITodo[];
+  deleteTodo: (id: number) => void;
+  completeTodo: (id: number) => void;
+}
 
 export const TodoList: React.FunctionComponent<ITodoList> = ({todos, completeTodo, deleteTodo}) => (
   <List>

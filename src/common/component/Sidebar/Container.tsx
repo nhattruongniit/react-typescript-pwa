@@ -7,11 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 import SendIcon from '@material-ui/icons/Send';
 
-import { useStateMenu } from './hooks/useStateMenu';
-
 export const Sidebar: React.FunctionComponent = () => {
-  const { isOpen, openMenu }  = useStateMenu(false);
-
   return (
     <div className="c-sidebar">
       <div className="c-sidebar__inner">

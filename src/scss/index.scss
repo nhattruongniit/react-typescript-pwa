@@ -16,9 +16,11 @@
 @import "objects/_objects.container";
 
 // COMPONENTS
+@import "components/_component.loading";
 @import "components/_component.header";
 @import "components/_component.sidebar";
 
 // UTILITIES
 @import "utilities/_utilities.margin";
 @import "utilities/_utilities.hidden";
+

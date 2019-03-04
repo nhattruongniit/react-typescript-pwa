@@ -1,6 +1,9 @@
-export const TODO_CALL_REQUEST = 'TODO_CALL_REQUEST';
-export const TODO_CALL_SUCCESS = 'TODO_CALL_SUCCESS';
-export const TODO_CALL_FAILURE = 'TODO_CALL_FAILURE';
+
+import {
+  TODO_CALL_REQUEST,
+  TODO_CALL_SUCCESS,
+  TODO_CALL_FAILURE,
+} from './action';
 
 const initialState = {
   fetching: false,
