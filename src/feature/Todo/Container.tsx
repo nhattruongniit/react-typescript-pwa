@@ -15,13 +15,14 @@ interface IPropsTodo {
   fetching: boolean;
   data: [];
   error: string;
-  fetchTodo: () => void;
+  fetchTodoRequest: () => void;
+  deleteTodoRequest: any;
 }
 
-const Todo: React.FunctionComponent<IPropsTodo> = ({ fetching, data, error, fetchTodo }) => {
-  const { todos, deleteTodo, completeTodo, initTodo } = useStateTodo();
+const Todo: React.FunctionComponent<IPropsTodo> = ({ fetching, data, error, fetchTodoRequest, deleteTodoRequest }) => {
+  const { todos, completeTodo, initTodo } = useStateTodo();
   const fetchData = async () => {
-    fetchTodo();
+    fetchTodoRequest();
     initTodo(data);
   };
 
@@ -33,6 +34,10 @@ const Todo: React.FunctionComponent<IPropsTodo> = ({ fetching, data, error, fetc
     initTodo(data);
   }, [data])
 
+  const deleteTodo = (id: number) => {
+    deleteTodoRequest(id);
+  }
+  
   return (
     <>
       {error && <div>some thing went wrong ... </div>}
@@ -55,7 +60,8 @@ const mapStateToProps = (
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  fetchTodo: () => dispatch({ type: 'TODO_CALL_REQUEST' }),
+  fetchTodoRequest: () => dispatch({ type: 'TODO_FETCH_REQUEST' }),
+  deleteTodoRequest: (id: number) => dispatch({ type: 'TODO_DELETE_REQUEST', id })
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Todo);
