@@ -12,11 +12,11 @@ export const useStateTodo = (initialValue: ITodo[] = []) => {
     addTodo: (todo: ITodo) => {
       setTodos([...todos, todo]);
     },
-    deleteTodo: (id: number) => {
-      // deleteTodoApi(id);
-      // const updatedTodos = todos.filter((_, index) => index !== id);
-      // setTodos(updatedTodos);
-    },
+    // deleteTodo: (id: number) => {
+    //   // deleteTodoApi(id);
+    //   // const updatedTodos = todos.filter((_, index) => index !== id);
+    //   // setTodos(updatedTodos);
+    // },
     completeTodo: (id: number) => {
       const cloned = [...todos];
       cloned[id].isCompleted = !cloned[id].isCompleted;

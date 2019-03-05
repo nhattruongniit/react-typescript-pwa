@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -18,12 +19,22 @@ export const Sidebar: React.FunctionComponent = () => {
         <List
           component="nav"
         >
-          <ListItem button>
-            <ListItemIcon>
-              <SendIcon />
-            </ListItemIcon>
-            <ListItemText inset primary="Todo" />
-          </ListItem>
+          <NavLink to="/todo" activeClassName="active">
+            <ListItem button>
+              <ListItemIcon>
+                <SendIcon />
+              </ListItemIcon>
+              <ListItemText inset primary="Todo" />
+            </ListItem>
+          </NavLink>
+          <NavLink to="/about" activeClassName="active">
+            <ListItem button>
+              <ListItemIcon>
+                <SendIcon />
+              </ListItemIcon>
+              <ListItemText inset primary="About" />
+            </ListItem>
+          </NavLink>
         </List>
         </div>
       </div>
